@@ -13,7 +13,15 @@ return new class extends Migration
     {
         Schema::create('feedback', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->unsignedBigInteger('user_id'); // Foreign key for user
+            $table->unsignedBigInteger('item_id'); // Foreign key for item
+            $table->tinyInteger('rating_value'); // Assuming a 1-5 rating scale
+            $table->timestamp('timestamp'); // Time of rating submission
+            $table->text('additional_data')->nullable(); // Optional additional data
+
+            // Foreign key constraints
+            $table->foreign('user_id')->references('id')->on('users');
+            $table->foreign('item_id')->references('id')->on('items');
         });
     }
 
