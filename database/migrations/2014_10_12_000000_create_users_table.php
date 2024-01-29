@@ -13,7 +13,12 @@ return new class extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
+            $table->string('Fname');
+            $table->string('Lname');
+            $table->string('contact');
+            $table->integer('age');
+            $table->string('gender');
+            $table->string('relation_to_deceased');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
@@ -30,3 +35,4 @@ return new class extends Migration
         Schema::dropIfExists('users');
     }
 };
+
