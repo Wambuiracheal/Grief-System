@@ -13,8 +13,20 @@ return new class extends Migration
     {
         Schema::create('content', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->string('title'); // Content title
+            $table->string('type'); // Content type (e.g., article, video, infographic, forum topic)
+            $table->string('category'); // Content category (e.g., grief types, coping mechanisms, self-care, support resources)
+            $table->string('target_audience')->nullable(); // Target audience (e.g., general, specific loss types, specific needs)
+            $table->text('body'); // Content body (text, HTML, or Markdown)
+            $table->unsignedBigInteger('author_id'); // Foreign key for author (references Users table)
+            $table->string('keywords')->nullable(); // Content keywords
+            $table->date('publication_date'); // Publication date
+            $table->timestamps(); // Automatically adds created_at and updated_at columns
+
+            // Foreign key constraint
+            $table->foreign('author_id')->references('id')->on('users');
         });
+
     }
 
     /**
