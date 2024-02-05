@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('gender');
             $table->string('company');
             $table->text('description');
-            $table->integer('experience_years');
+            $table->integer('years_of_experience');
             $table->boolean('available_for_hire');
             $table->timestamps();
         });
