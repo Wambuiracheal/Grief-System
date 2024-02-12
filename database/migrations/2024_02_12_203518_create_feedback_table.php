@@ -21,7 +21,8 @@ return new class extends Migration
 
             // Foreign key constraints
             $table->foreign('user_id')->references('id')->on('users');
-            $table->foreign('item_id')->references('id')->on('items');
+            $table->foreign('content_id')->references('id')->on('content');
+            $table->timestamps();
         });
     }
 
