@@ -11,12 +11,9 @@
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
 
+                        <!-- FirstName Input -->
                         <div class="row mb-3">
                             <label for="fname" class="col-md-4 col-form-label text-md-end">{{ __('First Name') }}</label>
-
-                            <div class="div col-md-6">
-                                <label for="lname" class="col-md-4 col-form-label text-md-end">{{ __('Last Name') }}</label>
-                            </div>
                             
                             <div class="col-md-6">
                                 <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
@@ -28,7 +25,25 @@
                                 @enderror
                             </div>
                         </div>
+                        <!-- FirstName Input Ends Here -->
 
+                        <!-- LastName Input -->
+                        <div class="row mb-3">
+                            <label for="lname" class="col-md-4 col-form-label text-md-end">{{ __('Last Name') }}</label>
+                            
+                            <div class="col-md-6">
+                                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
+
+                                @error('name')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+                        <!-- LastName Input Ends Here-->
+
+                        <!-- Email Address -->
                         <div class="row mb-3">
                             <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('Email Address') }}</label>
 
@@ -42,6 +57,7 @@
                                 @enderror
                             </div>
                         </div>
+                        <!-- Email Address Ends Here -->
 
                         <div class="row mb-3">
                             <label for="password" class="col-md-4 col-form-label text-md-end">{{ __('Password') }}</label>
