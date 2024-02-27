@@ -289,7 +289,7 @@
           </div>
           <div class="col-lg-5 position-relative" data-aos="fade-up" data-aos-delay="200">
             <div class="phone-wrap">
-              <img src="assets/img/iphone.png" alt="Image" class="img-fluid">
+              <img src="import/assets/img/inspired.jpeg" alt="inspired" class="img-fluid">
             </div>
           </div>
         </div>
@@ -322,9 +322,9 @@
         <div class="row gy-4">
           <div class="col-lg-5 col-md-12 footer-info">
             <a href="index.html" class="logo d-flex align-items-center">
-              <span>Nova</span>
+              <span>CTG</span>
             </a>
-            <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus.</p>
+            <p>Your Compass Through Grief. We care and we are more than willing to help.</p>
             <div class="social-links d-flex  mt-3">
               <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
               <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
@@ -347,11 +347,11 @@
           <div class="col-lg-2 col-6 footer-links">
             <h4>Our Services</h4>
             <ul>
-              <li><i class="bi bi-dash"></i> <a href="#">Web Design</a></li>
-              <li><i class="bi bi-dash"></i> <a href="#">Web Development</a></li>
-              <li><i class="bi bi-dash"></i> <a href="#">Product Management</a></li>
-              <li><i class="bi bi-dash"></i> <a href="#">Marketing</a></li>
-              <li><i class="bi bi-dash"></i> <a href="#">Graphic Design</a></li>
+              <li><i class="bi bi-dash"></i> <a href="#">Individual Counselling</a></li>
+              <li><i class="bi bi-dash"></i> <a href="#">Support groups and community</a></li>
+              <li><i class="bi bi-dash"></i> <a href="#">Grief Education</a></li>
+              <li><i class="bi bi-dash"></i> <a href="#">Grief Resources</a></li>
+              <li><i class="bi bi-dash"></i> <a href="#">Contentment</a></li>
             </ul>
           </div>
 
@@ -377,11 +377,7 @@
           &copy; Copyright <strong><span>CTG</span></strong>. All Rights Reserved
         </div>
         <div class="credits">
-          <!-- All the links in the footer should remain intact. -->
-          <!-- You can delete the links only if you purchased the pro version. -->
-          <!-- Licensing information: https://bootstrapmade.com/license/ -->
-          <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/nova-bootstrap-business-template/ -->
-          Designed by <a href="https://bootstrapmade.com/">CodesolutionsKE</a>
+        Designed by <a href="https://bootstrapmade.com/">WambuiRacheal</a>
         </div>
       </div>
     </div>
