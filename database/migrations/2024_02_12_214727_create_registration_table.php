@@ -11,20 +11,26 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('users', function (Blueprint $table) {
+        Schema::create('registration', function (Blueprint $table) {
             $table->id();
             $table->string('fname');
             $table->string('lname');
-            $table->string('contact')->nullable();
-            $table->integer('age')->nullable();
-            $table->string('gender')->nullable();
-            $table->string('relation_to_deceased')->nullable();
             $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
-            $table->rememberToken();
+            $table->rememberToken(); 
             $table->timestamps();
+            
         });
+
+        {
+            Schema::table('registration', function (Blueprint $table) {
+                $table->renameColumn('fname', 'first_name');
+            });
+
+            Schema::table('registration', function (Blueprint $table) {
+                $table->renameColumn('lname', 'last_name');
+            });
+        }
     }
 
     /**
@@ -32,7 +38,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('registration');
     }
 };
-
