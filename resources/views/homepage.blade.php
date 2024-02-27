@@ -61,7 +61,6 @@
           <li><a href="index.html" class="active">Home</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="services.html">Services</a></li>
-          <li><a href="blog.html">Blog</a></li>
           <li class="dropdown"><a href="#"><span>Categories</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
             <ul>
               <li><a href="#">We cater for all!!!</a></li>
@@ -70,6 +69,7 @@
                   <li><a href="#">Spouse Counselling</a></li>
                   <li><a href="#">Parent Counselling</a></li>
                   <li><a href="#">Child Counselling</a></li>
+                  <li><a href="#">Sibling Counselling</a></li>
                 </ul>
               </li>
             </ul>
@@ -97,7 +97,8 @@
         </div>
       </div>
     </div>
-  </section><!-- End Hero Section -->
+  </section>
+  <!-- End Hero Section -->
 
   <main id="main">
 
@@ -124,7 +125,8 @@
                     <h4 class="mb-3">Grief is not something that you get over, it is something that we learn to live with in our lives.</h4>
                     <p>Life after loss can feel like a forgotten melody, its notes scattered and silent. Our grief support system helps you pick up the fragments, reassembling them into a new, resilient song. Our platform offers the tools to orchestrate your healing, grief counseling for expert insights, and even creative outlets to let your emotions take flight. We believe every journey deserves a soundtrack, and we're here to help you compose yours, one poignant note at a time.</p>
                   </div>
-                </div><!-- End slide item -->
+                </div>
+                <!-- End slide item -->
 
                 <div class="swiper-slide">
                   <div class="item">
@@ -132,7 +134,8 @@
                     <h4 class="mb-3">Well,</h4>
                     <p>Grief casts a heavy shadow, but you don't have to walk its path alone. Our grief support system beckons with a warmth born of understanding. Here, you'll find not just practical tools and expert guidance, but a vibrant community of individuals who share your journey. Through shared stories, compassionate connection, and personalized support, we empower you to navigate the depths of grief and emerge stronger, ready to write a new chapter with renewed hope.</p>
                   </div>
-                </div><!-- End slide item -->
+                </div>
+                <!-- End slide item -->
 
                 <div class="swiper-slide">
                   <div class="item">
@@ -140,7 +143,8 @@
                     <h4 class="mb-3">You only need a smartphone or computer to connect with us.</h4>
                     <p>Beyond coping, we offer healing. We believe loss should be met with more than mere platitudes. Our platform provides a personalized toolkit for processing emotions, finding solace in creative expression, and accessing expert grief counseling - all from the comfort of your own home. Join us on a journey where vulnerability leads to strength, shared struggles spark connections, and grief gives way to hope's gentle whisper. Choose us, and find your path to a brighter future, even amidst the shadows.</p>
                   </div>
-                </div><!-- End slide item -->
+                </div>
+                <!-- End slide item -->
 
               </div>
               <div class="swiper-pagination"></div>
@@ -213,12 +217,14 @@
               <h4 class="title"><a href="#" class="stretched-link">Contentment</a></h4>
               <p class="description">Lastly, we ensure that all our resources, geared towards grief support are client satisfactory by ensuring feedback on information provided for improvement.</p>
             </div>
-          </div><!-- End Service Item -->
+          </div>
+          <!-- End Service Item -->
 
         </div>
 
       </div>
-    </section><!-- End Our Services Section -->
+    </section>
+    <!-- End Our Services Section -->
 
     <!-- ======= Join the Online Community ======= -->
     <section id="call-to-action" class="call-to-action">
@@ -226,7 +232,7 @@
         <div class="row justify-content-center">
           <div class="col-lg-6 text-center">
             <h3>Grief is easier once the burden is shared.</h3>
-            <p>Join our online community where you get to connect with people who have gone through the same thing and are ready to share their experiences as encouragement.</p>
+            <p>Join our online communities where you get to connect with people who have gone through the same thing and are ready to share their experiences as encouragement.</p>
             <a class="cta-btn" href="#">Call To Action</a>
           </div>
         </div>
@@ -305,75 +311,8 @@
 
     </section><!-- End Features Section -->
 
-    <!-- ======= Recent Blog Posts Section ======= -->
-    <section id="recent-posts" class="recent-posts">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-header">
-          <h2>Recent Blog Posts</h2>
-
-        </div>
-
-        <div class="row gy-5">
-
-          <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="post-box">
-              <div class="post-img"><img src="assets/img/blog/blog-1.jpg" class="img-fluid" alt=""></div>
-              <div class="meta">
-                <span class="post-date">Tue, January</span>
-                <span class="post-author"> / Annestellah Chepchumba</span>
-              </div>
-              <h3 class="post-title">A Grief Greater than the Sum of its Parts</h3>
-              <p>Illum voluptas ab enim placeat. Adipisci enim velit nulla. Vel omnis laudantium. Asperiores eum ipsa est officiis. Modi qui magni est...</p>
-              <a href="blog-details.html" class="readmore stretched-link"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
-            </div>
-          </div>
-
-          <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="post-box">
-              <div class="post-img"><img src="assets/img/blog/blog-2.jpg" class="img-fluid" alt=""></div>
-              <div class="meta">
-                <span class="post-date">Fri, September 05</span>
-                <span class="post-author"> / Mario Douglas</span>
-              </div>
-              <h3 class="post-title">Et repellendus molestiae qui est sed omnis</h3>
-              <p>Voluptatem nesciunt omnis libero autem tempora enim ut ipsam id. Odit quia ab eum assumenda. Quisquam omnis doloribus...</p>
-              <a href="blog-details.html" class="readmore stretched-link"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
-            </div>
-          </div>
-
-          <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="post-box">
-              <div class="post-img"><img src="assets/img/blog/blog-3.jpg" class="img-fluid" alt=""></div>
-              <div class="meta">
-                <span class="post-date">Tue, July 27</span>
-                <span class="post-author"> / Lisa Hunter</span>
-              </div>
-              <h3 class="post-title">Quia assumenda est et veritati</h3>
-              <p>Quia nam eaque omnis explicabo similique eum quaerat similique laboriosam. Quis omnis repellat sed quae consectetur magnam...</p>
-              <a href="blog-details.html" class="readmore stretched-link"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
-            </div>
-          </div>
-
-          <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
-            <div class="post-box">
-              <div class="post-img"><img src="assets/img/blog/blog-4.jpg" class="img-fluid" alt=""></div>
-              <div class="meta">
-                <span class="post-date">Tue, Sep 16</span>
-                <span class="post-author"> / Mario Douglas</span>
-              </div>
-              <h3 class="post-title">Pariatur quia facilis similique deleniti</h3>
-              <p>Et consequatur eveniet nam voluptas commodi cumque ea est ex. Aut quis omnis sint ipsum earum quia eligendi...</p>
-              <a href="blog-details.html" class="readmore stretched-link"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Recent Blog Posts Section -->
-
-  </main><!-- End #main -->
+  </main>
+  <!-- End #main -->
 
   <!-- ======= Footer ======= -->
   <footer id="footer" class="footer">
