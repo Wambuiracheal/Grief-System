@@ -61,19 +61,7 @@
           <li><a href="index.html" class="active">Home</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="services.html">Services</a></li>
-          <li class="dropdown"><a href="#"><span>Categories</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
-            <ul>
-              <li><a href="#">We cater for all!!!</a></li>
-              <li class="dropdown"><a href="#"><span>Families are well considered</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
-                <ul>
-                  <li><a href="#">Spouse Counselling</a></li>
-                  <li><a href="#">Parent Counselling</a></li>
-                  <li><a href="#">Child Counselling</a></li>
-                  <li><a href="#">Sibling Counselling</a></li>
-                </ul>
-              </li>
-            </ul>
-          </li>
+          <li><a href="contact.html">Articles</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav><!-- .navbar -->
@@ -91,7 +79,7 @@
             <p>You Are Not Alone </p>
           </blockquote>
           <div class="d-flex" data-aos="fade-up" data-aos-delay="200">
-            <a href="#Login" class="btn-get-started">Get Started</a>
+            <a href="login" class="btn-get-started">Get Started</a>
             <a href="https://youtu.be/P4PNNlGWq_Q?si=zXN1aCip_8hOcju5" class="glightbox btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span>Watch Video</span></a>
           </div>
         </div>
@@ -233,7 +221,7 @@
           <div class="col-lg-6 text-center">
             <h3>Grief is easier once the burden is shared.</h3>
             <p>Join our online communities where you get to connect with people who have gone through the same thing and are ready to share their experiences as encouragement.</p>
-            <a class="cta-btn" href="#">Call To Action</a>
+            <a class="cta-btn" href="https://chat.whatsapp.com/JAaMs74qDGVIZJLnJt0nXI">Call To Action</a>
           </div>
         </div>
 
@@ -302,7 +290,7 @@
             <div class="col-md-6">
               <h4>Become one of Us</h4>
               <p>If you have not yet joined us, Do it today!!! You won't regret it</p>
-              <a href="#about" class="btn-get-started">Get Started</a>
+              <a href="register" class="btn-get-started">Get Started</a>
             </div>
           </div>
 

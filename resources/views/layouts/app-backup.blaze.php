@@ -21,7 +21,9 @@
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <ul>
                 <li><a href="{{ route('home') }}">Home</a></li>
-
+                @if (auth()->user()->hasDashboardAccess())
+                    <li><a href="{{ route('dashboard') }}">Dashboard</a></li>
+                @endif
             </ul>
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
