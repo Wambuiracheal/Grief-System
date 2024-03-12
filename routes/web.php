@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
-// use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\DashboardController;
 // use App\Http\Controllers\Auth\RegisterController;
 
 // Views
@@ -28,3 +28,5 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 // Logout Feature
 // Route::post('/logout', 'Auth\LoginController@logout')->name('logout');
 
+//dashboard
+Route::get('/dashboard', [DashboardController::class, 'index'])->middleware('auth');

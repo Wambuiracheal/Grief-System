@@ -20,7 +20,7 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <ul>
-                <li><a href="{{ route('home') }}">Home</a></li>
+                <a href="{{ route('home') }}">Home</a>
 
             </ul>
             <div class="container">
