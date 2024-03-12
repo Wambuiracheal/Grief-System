@@ -63,7 +63,6 @@
           <li><a href="services.html">Services</a></li>
           <li><a href="contact.html">Articles</a></li>
           <li><a href="contact.html">Contact</a></li>
-          <li><a href="login">Login</a></li>
         </ul>
       </nav><!-- .navbar -->
 
