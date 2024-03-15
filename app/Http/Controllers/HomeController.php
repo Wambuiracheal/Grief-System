@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Client;
 
 class HomeController extends Controller
 {
@@ -23,13 +24,20 @@ class HomeController extends Controller
      */
     public function index()
     {
+        {
+            $Clients = Client::all(); // Fetch all clients
+    
+            // Now you can use $grievingClients in your view (explained later)
+    
+            return view('home', compact('grievingClients'));
+        }
         return view('client.home');
 
         {
             $bookedSessions = \App\Models\Booking::where('status', '=', 'booked')->count();
             $completedSessions = \App\Models\Booking::where('status', '=', 'completed')->count();
             $upcomingSessions = \App\Models\Booking::where('status', '=', 'upcoming')->count();
-            $grievingClients = \App\Models\Client::count();
+            $Clients = \App\Models\Client::count();
     
             return view('client.home', compact('bookedSessions', 'completedSessions', 'upcomingSessions', 'grievingClients'));
 
@@ -40,7 +48,7 @@ class HomeController extends Controller
             'bookedSessions' => $bookedSessions,
             'completedSessions' => $completedSessions,
             'upcomingSessions' => $upcomingSessions,
-            'grievingClients' => $grievingClients,
+            'Clients' => $Clients,
             ]);
         
         }
