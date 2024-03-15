@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ClientController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\SessionController;
 use App\Http\Controllers\CounselorController;
 use App\Http\Controllers\Auth\ForgotPasswordController;
 // use App\Http\Controllers\Auth\RegisterController;
@@ -24,6 +25,10 @@ Route::get('/home', function () {
 
 Route::get('/client.profile', function () {
     return view('client.profile');
+});
+
+Route::get('/bookings', function () {
+    return view('bookings');
 });
 //authentication
 Route::post('/forgot-password', [ForgotPasswordController::class, 'sendResetLink'])

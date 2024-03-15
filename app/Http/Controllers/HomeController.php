@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Client;
+use App\Models\Session;
 
 class HomeController extends Controller
 {
@@ -32,6 +33,14 @@ class HomeController extends Controller
             return view('client.home', compact('Clients'));
         }
         return view('client.home');
+
+        {
+            $upcomingSessions = Session::upcoming()->get(); // Fetch upcoming sessions
+    
+            // Now you can use $upcomingSessions in your view (explained later)
+    
+            return view('client.home', compact('upcomingSessions'));
+        }
 
         {
             $bookedSessions = \App\Models\Booking::where('status', '=', 'booked')->count();
