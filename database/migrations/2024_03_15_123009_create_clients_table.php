@@ -12,9 +12,14 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('clients', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
+            $table->foreignId('user_id')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');
+            $table->string('name');
+            $table->integer('phone')->nullable();
+            $table->string('grief_reason')->nullable(); // Reason for seeking support
             $table->timestamps();
         });
+        
     }
 
     /**

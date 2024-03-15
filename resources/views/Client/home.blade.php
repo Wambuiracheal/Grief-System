@@ -38,7 +38,7 @@
                 </tr>
               </thead>
               <tbody>
-                @foreach ($grievingClients as $client)
+                @foreach ($Clients as $client)
                   <tr>
                     <td>{{ $client->name }}</td>
                     <td>{{ $client->loss }}</td> <td>

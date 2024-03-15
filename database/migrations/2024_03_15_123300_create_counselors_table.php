@@ -12,7 +12,12 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('counselors', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
+            $table->foreignId('user_id')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');
+            $table->string('name');
+            $table->string('specialization')->nullable(); // Area of expertise
+            $table->text('bio')->nullable();
+            $table->string('availability')->nullable(); // Weekly schedule or time slots
             $table->timestamps();
         });
     }

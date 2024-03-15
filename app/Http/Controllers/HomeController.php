@@ -29,7 +29,7 @@ class HomeController extends Controller
     
             // Now you can use $grievingClients in your view (explained later)
     
-            return view('home', compact('grievingClients'));
+            return view('client.home', compact('Clients'));
         }
         return view('client.home');
 
