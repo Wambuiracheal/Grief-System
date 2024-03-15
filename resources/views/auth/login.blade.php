@@ -150,27 +150,9 @@
                         <!-- Register buttons -->
                         <div class="text-center">
                         <p>New User? <a href="register">Create Account</a></p>
-                        <p>or sign up with:</p>
-
-                        <button type="button" class="btn btn-link btn-floating mx-1">
-                        <i class="fab fa-facebook-f"></i>
-                        </button>
-
-                        <button type="button" class="btn btn-link btn-floating mx-1">
-                        <i class="fab fa-google"></i>
-                        </button>
-
-                        <button type="button" class="btn btn-link btn-floating mx-1">
-                        <i class="fab fa-twitter"></i>
-                        </button>
-
-                        <button type="button" class="btn btn-link btn-floating mx-1">
-                        <i class="fab fa-github"></i>
-                        </button>
-                        </div>
 
                             @if (Route::has('password.request'))
-                                <a class="btn btn-link float-end" href="{{ route('password.request') }}">
+                                <a class="btn btn-link middle" href="{{ route('password.request') }}">
                                     {{ __('Forgot Your Password?') }}
                                 </a>
                             @endif

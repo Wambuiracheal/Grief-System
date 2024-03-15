@@ -7,7 +7,10 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'CTG') }}</title>
+    <title>{{ config('CTG.name', 'CTG') }}</title>
+    <!-- Favicons -->
+    <link href="{{ asset('import/assets/img/favicon.ico') }}" rel="icon">
+    <link href="{{ asset('import/assets/img/apple-touch-icon.png') }}" rel="apple-touch-icon">
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.bunny.net">
