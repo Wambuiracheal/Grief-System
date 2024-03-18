@@ -9,17 +9,17 @@ use App\Models\Sessions;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Auth;
-use App\Models\Program;
+use App\Models\Programs;
 use App\Models\Counselor;
 
 class SessionsController extends Controller
 {
     /**
      * Display a listing of the resource.
-     *
+     *  @param \App\Http\Requests\UpdateSessionsRequest $request
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
         $get_client_id = Client::select('id')
             ->where('UserId', Auth::user()->id)
@@ -39,7 +39,7 @@ class SessionsController extends Controller
             ->where('sessions.Status', 'Present')
             ->get();
 
-        $programs = Program::join('counselors', 'programs.CounselorId', '=', 'counselors.id')
+        $programs = Programs::join('counselors', 'programs.CounselorId', '=', 'counselors.id')
             ->select('counselors.id As counselorId', 'counselors.Name As counselor', 'programs.Name As program', 'programs.Day', 'programs.Duration', 'programs.Price')
             ->paginate(3);
 
@@ -48,7 +48,7 @@ class SessionsController extends Controller
 
     public function bookSession()
     {
-        $programs = Program::join('counselors', 'programs.CounselorId', '=', 'counselors.id')
+        $programs = Programs::join('counselors', 'programs.CounselorId', '=', 'counselors.id')
             ->select('counselors.id As counselorId', 'counselors.Name As counselor', 'programs.id', 'programs.Name As program', 'programs.Day', 'programs.Duration', 'programs.Price')
             ->get();
 

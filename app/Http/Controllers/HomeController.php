@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Client;
-use App\Models\Session;
+use App\Models\Booking; // Assuming 'Booking' is your model for sessions
 
 class HomeController extends Controller
 {
@@ -25,42 +25,17 @@ class HomeController extends Controller
      */
     public function index()
     {
-        {
-            $Clients = Client::all(); // Fetch all clients
-    
-            // Now you can use $grievingClients in your view (explained later)
-    
-            return view('client.home', compact('Clients'));
-        }
-        return view('client.home');
+        $clients = Client::all(); // Fetch all clients
 
-        {
-            $upcomingSessions = Session::upcoming()->get(); // Fetch upcoming sessions
-    
-            // Now you can use $upcomingSessions in your view (explained later)
-    
-            return view('client.home', compact('upcomingSessions'));
-        }
+        $bookedSessions = Booking::where('status', '=', 'booked')->count();
+        $completedSessions = Booking::where('status', '=', 'completed')->count();
+        $upcomingSessions = Booking::upcoming()->get(); // Fetch upcoming sessions
 
-        {
-            $bookedSessions = \App\Models\Booking::where('status', '=', 'booked')->count();
-            $completedSessions = \App\Models\Booking::where('status', '=', 'completed')->count();
-            $upcomingSessions = \App\Models\Booking::where('status', '=', 'upcoming')->count();
-            $Clients = \App\Models\Client::count();
-    
-            return view('client.home', compact('bookedSessions', 'completedSessions', 'upcomingSessions', 'grievingClients'));
-
-            // Option 2: Explicitly passing variables
-            $bookedSessions = \App\Models\Booking::where('status', '=', 'booked')->count();
-            // ... rest of the code ...
-            return view('client.home', [
-            'bookedSessions' => $bookedSessions,
-            'completedSessions' => $completedSessions,
-            'upcomingSessions' => $upcomingSessions,
-            'Clients' => $Clients,
-            ]);
-        
-        }
-
+        return view('client.home', compact(
+            'clients',
+            'bookedSessions',
+            'completedSessions',
+            'upcomingSessions'
+        ));
     }
 }

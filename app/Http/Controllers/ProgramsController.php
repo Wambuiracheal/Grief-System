@@ -125,7 +125,7 @@ class ProgramsController extends Controller
      * @param  \App\Models\Programs  $programs
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateProgramsRequest $request, Programs $programs)
+    public function update(UpdateProg ramsRequest $request, Programs $programs)
     {
         //
     }

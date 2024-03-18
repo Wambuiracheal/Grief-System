@@ -17,7 +17,7 @@
                     </a>
                 </li> --}}
                 <li class="sidebar-item">
-                    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{ route('client.bookings') }}" aria-expanded="false">
+                    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{ route('bookings') }}" aria-expanded="false">
                         <i class="mdi mdi-border-all"></i>
                         <span class="hide-menu">Bookings</span>
                     </a>

@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('Day',65);
             $table->string('Duration',50);
             $table->integer('CounselorId')->unsigned();
-            $table->foreign('TrainerId')->references('id')->on('trainers')->onDelete('cascade')->onUpdate('cascade');
+            $table->foreign('CounselorId')->references('id')->on('trainers')->onDelete('cascade')->onUpdate('cascade');
             $table->integer('Price');
             $table->timestamps();
         });
