@@ -98,7 +98,6 @@
     </style>
 </head>
 <body>
-    <!DOCTYPE html>
     <div class="container h-100">
         <div class="row h-100 justify-content-center align-items-center">
             <div class="col-md-6 col-lg-4 mx-auto">

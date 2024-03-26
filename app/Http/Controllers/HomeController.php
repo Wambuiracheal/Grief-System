@@ -4,7 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Client;
-use App\Models\Booking; // Assuming 'Booking' is your model for sessions
+use App\Models\Sessions; // Assuming 'Booking' is your model for sessions
+use App\Models\Booking;
 
 class HomeController extends Controller
 {
@@ -27,9 +28,9 @@ class HomeController extends Controller
     {
         $clients = Client::all(); // Fetch all clients
 
-        $bookedSessions = Booking::where('status', '=', 'booked')->count();
-        $completedSessions = Booking::where('status', '=', 'completed')->count();
-        $upcomingSessions = Booking::upcoming()->get(); // Fetch upcoming sessions
+        $bookedSessions = Sessions::where('status', '=', 'booked')->count();
+        $completedSessions = Sessions::where('status', '=', 'completed')->count();
+        $upcomingSessions = Sessions::where('status', '=', 'upcoming')->count(); // Fetch upcoming sessions
 
         return view('client.home', compact(
             'clients',
