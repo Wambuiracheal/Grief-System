@@ -7,39 +7,27 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('CTG.name', 'CTG') }}</title>
-    <!-- Favicons -->
-    <link href="{{ asset('import/assets/img/favicon.ico') }}" rel="icon">
-    <link href="{{ asset('import/assets/img/apple-touch-icon.png') }}" rel="apple-touch-icon">
+    <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
 
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
-    <style>
-        .navbar-brand {
-            color: rgb(145, 160, 173);
-            font-weight: bold;
-            font-size: 24px;
-            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-        }
-
-        .navbar {
-            background-color: #1B2F45;
-        }
-    </style>
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-dark bg-custom shadow-sm">
+        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+            <ul>
+                <li><a href="{{ route('home') }}">Home</a></li>
+                @if (auth()->user()->hasDashboardAccess())
+                    <li><a href="{{ route('dashboard') }}">Dashboard</a></li>
+                @endif
+            </ul>
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('CTG.name', 'CTG') }}
+                    {{ config('app.name', 'Laravel') }}
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>

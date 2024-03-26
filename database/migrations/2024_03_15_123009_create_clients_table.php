@@ -11,18 +11,15 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('professional', function (Blueprint $table) {
-            $table->id();
+        Schema::create('clients', function (Blueprint $table) {
+            $table->increments('id');
+            $table->foreignId('user_id')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');
             $table->string('name');
-            $table->string('email');
-            $table->string('age');
-            $table->string('gender');
-            $table->string('company');
-            $table->text('description');
-            $table->integer('years_of_experience');
-            $table->boolean('available_for_hire');
+            $table->integer('phone')->nullable();
+            $table->string('grief_reason')->nullable(); // Reason for seeking support
             $table->timestamps();
         });
+        
     }
 
     /**
@@ -30,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('professional');
+        Schema::dropIfExists('clients');
     }
 };

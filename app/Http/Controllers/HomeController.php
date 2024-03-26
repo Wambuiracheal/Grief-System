@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Client;
+use App\Models\Sessions; // Assuming 'Booking' is your model for sessions
+use App\Models\Booking;
 
 class HomeController extends Controller
 {
@@ -23,6 +26,17 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $clients = Client::all(); // Fetch all clients
+
+        $bookedSessions = Sessions::where('status', '=', 'booked')->count();
+        $completedSessions = Sessions::where('status', '=', 'completed')->count();
+        $upcomingSessions = Sessions::where('status', '=', 'upcoming')->count(); // Fetch upcoming sessions
+
+        return view('client.home', compact(
+            'clients',
+            'bookedSessions',
+            'completedSessions',
+            'upcomingSessions'
+        ));
     }
 }
