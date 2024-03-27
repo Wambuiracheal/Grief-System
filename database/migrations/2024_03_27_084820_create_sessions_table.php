@@ -13,14 +13,16 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('programs', function (Blueprint $table) {
+        Schema::create('sessions', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('Name',65);
-            $table->string('Day',65);
-            $table->string('Duration',50);
+            //$table->string('Name',55);
+            $table->integer('ProgramId')->unsigned();
+            $table->foreign('ProgramId')->references('id')->on('programs')->onDelete('cascade')->onUpdate('cascade');
+            $table->integer('ClientId')->unsigned();
+            $table->foreign('ClientId')->references('id')->on('clients')->onDelete('cascade')->onUpdate('cascade');
             $table->integer('CounselorId')->unsigned();
             $table->foreign('CounselorId')->references('id')->on('counselors')->onDelete('cascade')->onUpdate('cascade');
-            $table->integer('Price');
+            $table->string('Duration');
             $table->timestamps();
         });
     }
@@ -32,6 +34,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('programs');
+        Schema::dropIfExists('sessions');
     }
 };

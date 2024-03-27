@@ -25,10 +25,10 @@ class StoreSessionsRequest extends FormRequest
     public function rules()
     {
         return [
-            'Program' => 'required|integer|exists:programs,id', // Ensure program ID exists
-            'Counselor' => 'required|integer|exists:counselors,id', // Ensure counselor ID exists
-            'Date' => 'required|date|after:today', // Ensure valid date and future date
-            'Duration' => 'required|numeric|min:1', // Ensure numerical duration and minimum of 1
+            //'Program' => 'required|integer|exists:programs,id', // Ensure program ID exists
+            //'Counselor' => 'required|integer|exists:counselors,id', // Ensure counselor ID exists
+            //'Date' => 'required|date|after:today', // Ensure valid date and future date
+            //'Duration' => 'required|numeric|min:1', // Ensure numerical duration and minimum of 1
         ];
     }
 }

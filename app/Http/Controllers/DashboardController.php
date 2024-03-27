@@ -24,7 +24,7 @@ class DashboardController extends Controller
     
             // ... repeat for upcoming sessions and grieving clients (if applicable)
     
-            return view('client.home', compact('bookedSessions', 'completedSessions', 'upcomingSessions', 'grievingClients'));
+            return view('home', compact('bookedSessions', 'completedSessions', 'upcomingSessions', 'grievingClients'));
             $bookedSessions = Booking::where('status', 'booked')->count();
             $completedSessions = Booking::where('status', 'completed')->count();
     
@@ -35,7 +35,7 @@ class DashboardController extends Controller
             // Grieving Clients Logic (replace with your specific criteria)
             $clients = client::all(); // Replace with your filtering logic
     
-            return view('client.home', compact(
+            return view('home', compact(
                 'bookedSessions',
                 'completedSessions',
                 'upcomingSessions',

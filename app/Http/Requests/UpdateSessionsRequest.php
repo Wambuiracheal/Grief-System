@@ -26,10 +26,10 @@ class UpdateSessionsRequest extends FormRequest
     {
         return [
             // Adjust validation rules as needed based on your update scenario
-            'Program' => 'nullable|integer|exists:programs,id', // Optional, program ID must exist if provided
-            'Counselor' => 'nullable|integer|exists:counselors,id', // Optional, counselor ID must exist if provided
-            'Date' => 'nullable|date|after:today', // Optional, valid date and future date if provided
-            'Duration' => 'nullable|numeric|min:1', // Optional, numerical duration and minimum of 1 if provided
+            //'Program' => 'nullable|integer|exists:programs,id', // Optional, program ID must exist if provided
+            //'Counselor' => 'nullable|integer|exists:counselors,id', // Optional, counselor ID must exist if provided
+            //'Date' => 'nullable|date|after:today', // Optional, valid date and future date if provided
+            //'Duration' => 'nullable|numeric|min:1', // Optional, numerical duration and minimum of 1 if provided
         ];
     }
 }

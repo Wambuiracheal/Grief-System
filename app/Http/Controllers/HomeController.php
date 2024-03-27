@@ -32,7 +32,7 @@ class HomeController extends Controller
         $completedSessions = Sessions::where('status', '=', 'completed')->count();
         $upcomingSessions = Sessions::where('status', '=', 'upcoming')->count(); // Fetch upcoming sessions
 
-        return view('client.home', compact(
+        return view('home', compact(
             'clients',
             'bookedSessions',
             'completedSessions',

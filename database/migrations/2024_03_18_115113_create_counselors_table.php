@@ -1,4 +1,4 @@
-<?php
+<?php 
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
@@ -8,36 +8,28 @@ return new class extends Migration
 {
     /**
      * Run the migrations.
+     *
+     * @return void
      */
-    public function up(): void
+    public function up()
     {
-        Schema::create('programs', function (Blueprint $table) {
-            $table->id(); // Auto-incrementing primary key
-
-            $table->string('name'); // Name of the program
-
-            $table->text('description'); // Description of the program
-
-            $table->bigInteger('counselor_id')->unsigned()->nullable(false);
-            $table->foreign('counselor_id')->references('id')->on('trainers')->onDelete('cascade');
-            // Foreign key referencing the 'trainers' table (assuming your counselor model is named 'Trainer')
-
-            $table->date('start_date'); // Start date of the program
-
-            $table->date('end_date')->nullable(); // Optional end date (if program is ongoing)
-
-            $table->integer('duration')->unsigned(); // Duration of the program in weeks
-
-            $table->string('status')->default('active'); // Status of the program (e.g., active, closed)
-
-            $table->timestamps(); // Created and updated timestamps
+        Schema::create('counselors', function (Blueprint $table) {
+            $table->increments('id');
+            //$table->integer('UserId')->unsigned();
+            $table->foreignId('UserId')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');
+            $table->string('Name', 25);
+            $table->string('Phone', 15); // Changed to string to allow special characters like '+'
+            $table->string('Sector', 20);
+            $table->timestamps();
         });
     }
 
     /**
      * Reverse the migrations.
+     *
+     * @return void
      */
-    public function down(): void
+    public function down()
     {
         Schema::dropIfExists('counselors');
     }

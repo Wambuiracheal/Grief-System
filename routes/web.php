@@ -3,7 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\HomeController;
-use App\Http\Controllers\ClientController;
+use App\Http\Controllers\ClientsController;
+use App\Http\Controllers\BookingsController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\SessionsController;
 use App\Http\Controllers\ProgramsController;
@@ -24,8 +25,8 @@ Route::get('/home', function () {
     return view('home');
 });
 
-Route::get('/client.profile', function () {
-    return view('client.profile');
+Route::get('/profile', function () {
+    return view('profile');
 });
 
 Route::get('/bookings', function () {
@@ -70,10 +71,36 @@ Route::get('Programs', function() { return view('Programs'); })->name('Programs'
 Route::get('Client/Profile', function() { return view('Client/Profile'); })->name('Client.Profile');
 
 Route::get('book-session', function() { return view('book-session'); });
-Route::get('create-session', function() { return view('Trainer/create-session'); });
+Route::get('create-session', function() { return view('counselor/create-session'); });
 
 Route::get('profile', function() { return view('profile'); })->name('client.profile');
-Route::get('bookings', function() { return view('bookings'); })->name('bookings');
+Route::get('bookings', function() { return view('bookings'); })->name('client.bookings');
 Route::get('programs', function() { return view('programs'); })->name('programs');
+
+Route::get('book-session', [SessionsController::class,'booksession'])->name('booksession');
+Route::post('session', [SessionsController::class, 'store'])->name('create-session');
+Route::get('index', [SessionsController::class,'index'])->name('client.index');
+
+Route::get('Counselor.index');
+Route::get('Counselor/Bookings', [BookingsController::class,'index'])->name('Counselor.Bookings');
+Route::post('Counselor/Bookings/{id}', [BookingsController::class, 'approveBooking'])->name('approve-booking');
+Route::get('Counselor/Profile', [CounselorController::class, 'profile'])->name('Counselor.Profile');
+
+
+Route::get('profile', [ClientsController::class,'profile'])->name('client.profile');
+Route::get('sessions', [SessionsController::class, 'sessions'])->name(('client.sessions'));
+Route::get('bookings', [BookingsController::class, 'clientbookings'])->name('client.bookings');
+
+Route::get('Counselor/Programs', [ProgramsController::class, 'index'])->name('Counselor.Programs');
+Route::post('Counselor/Programs', [ProgramsController::class, 'store'])->name('create.program');
+
+
+
+Route::get('Counselor/Sessions', [SessionsController::class, 'approvedSessions'])->name('Counselor.Sessions');
+Route::post('Counselor/Sessions/{id}', [SessionsController::class, 'markAttendance'])->name('mark.attendance');
+
+Route::get('Counselor/Programs/{id}', [ProgramsController::class, 'show'])->name('show.program');
+Route::delete('Counselor/Programs/{id}', [ProgramsController::class, 'destroy'])->name('delete.program');
+Route::get('Counselor/client-records/{id}', [ClientsController::class, 'showRecords'])->name('client.records');
 
 });

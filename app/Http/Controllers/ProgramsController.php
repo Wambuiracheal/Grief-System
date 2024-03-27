@@ -125,10 +125,21 @@ class ProgramsController extends Controller
      * @param  \App\Models\Programs  $programs
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateProg ramsRequest $request, Programs $programs)
+    public function update(Request $request, Programs $programs, $id)  // Add $id as argument
     {
-        //
+        // Access validated data using $request->validated() (if applicable)
+        $validatedData = $request->validated();
+    
+        $program = $programs->find($id);
+    
+        // ... your update logic here ...
+    
+        return response()->json([
+            'message' => 'Program updated successfully!',
+        ]);
     }
+    
+    
 
     /**
      * Remove the specified resource from storage.
